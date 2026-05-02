@@ -10,14 +10,14 @@ sys.path.insert(0, ZULIP_PATH)
 os.chdir(ZULIP_PATH)
 
 # check for the venv
-from tools.lib import sanity_check
+from .lib import sanity_check
 
 sanity_check.check_venv(__file__)
 
 from zulip import Client
 
-from tools.lib.test_script import add_provision_check_override_param, assert_provisioning_status_ok
-from tools.lib.test_server import test_server_running
+from .lib.test_script import add_provision_check_override_param, assert_provisioning_status_ok
+from .lib.test_server import test_server_running
 
 usage = """test-api [options]"""
 parser = argparse.ArgumentParser(usage)

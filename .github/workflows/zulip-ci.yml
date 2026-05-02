@@ -169,6 +169,8 @@ jobs:
           perun monitor test-api.py
           cd ../
           ls
+          cd perun_results
+          ls
           cat ./perun_results/test-api
       - name: Run mypy
         run: |

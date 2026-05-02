@@ -171,7 +171,7 @@ jobs:
           ls
           cd perun_results
           ls
-          cat ./perun_results/test-api
+          cat ./perun_results/test-api.hdf5
       - name: Run mypy
         run: |
           source tools/ci/activate-venv

@@ -160,18 +160,13 @@ jobs:
       - name: Install perun
         run: |
           source tools/ci/activate-venv
-          pip install perun
+          pip install py-power-profile
       - name: Run api tests
         run: |
           mkdir perun_results
           source tools/ci/activate-venv
           cd tools
-          perun monitor test-backend.py
-          cd ../
-          ls
-          cd perun_results
-          ls
-          cat *.txt
+          py-power profile test-api.py --output results.json
       - name: Run mypy
         run: |
           source tools/ci/activate-venv

@@ -166,6 +166,7 @@ jobs:
           mkdir perun_results
           source tools/ci/activate-venv
           cd tools
+          export PY_POWER_ENERGY_BUDGET_MJ="1000"
           py-power profile test-api.py --output results.json
       - name: Run mypy
         run: |

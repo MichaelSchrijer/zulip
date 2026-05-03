@@ -166,7 +166,7 @@ jobs:
           mkdir perun_results
           source tools/ci/activate-venv
           cd tools
-          perun monitor test-api.py
+          perun monitor test-backend.py
           cd ../
           ls
           cd perun_results

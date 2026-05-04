@@ -168,7 +168,7 @@ jobs:
           cd tools
           export PY_POWER_ENERGY_BUDGET_MJ="10"
           export PY_POWER_BACKEND="rapl"
-          py-power profile test-api.py --output results.json
+          py-power profile test-test.py --output results.json
       - name: Run mypy
         run: |
           source tools/ci/activate-venv

@@ -160,7 +160,7 @@ jobs:
       - name: Install perun
         run: |
           source tools/ci/activate-venv
-          pip install py-power-profile
+          pip install py-power-profile[rapl]
       - name: Run api tests
         run: |
           mkdir perun_results
